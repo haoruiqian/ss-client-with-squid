@@ -11,6 +11,7 @@ ipset -N chnroute hash:net maxelem 65536;
 for ip in $(cat '/root/chnroute.txt'); do
   ipset add chnroute $ip
 done
+
 echo "Setup iptables"
 # Setup iptables
 iptables -t nat -N SHADOWSOCKS
