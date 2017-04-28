@@ -2,8 +2,11 @@
 
 cd /root
 
+if [ "$UPDATE_IP_RANGE" = "1" ]
+then
 echo "Download IP addresses of China"
 curl 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | grep ipv4 | grep CN | awk -F\| '{ printf("%s/%d\n", $4, 32-log($5)/log(2)) }' > chnroute.txt
+fi
 
 # Setup the ipset
 ipset -N chnroute hash:net maxelem 65536;
