@@ -1,4 +1,6 @@
-A shadowsocks client with squid as http(s) proxy server
+A shadowsocks client with squid as http(s) proxy server.
+
+All requests to non Chinese IPs will be redirected to shadowsocks server, all requests to Chinese IPs will be sent out directly without any proxy.
 
 # How to run it.
 1. [Install docker.](https://www.docker.com/)
