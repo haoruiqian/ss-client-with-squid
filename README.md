@@ -15,3 +15,5 @@ export http_proxy=http://127.0.0.1:3128
 export https_proxy=http://127.0.0.1:3128
 export all_proxy=http://127.0.0.1:3128
   ```
+
+This docker image uses IP ranges defined in http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest to determine IP ranges of China, to always use latest IP ranges, add an environment variable `UPDATE_IP_RANGE` and set it to `1` when start docker container in step 2.
